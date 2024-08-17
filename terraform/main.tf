@@ -10,12 +10,12 @@ terraform {
    backend "s3" {
     bucket = "terraform-with-github-actions-remote-state"
     key    = "PROD/website.tfstate"
-    region = "east-us-1"
+    region = "us-east-1"
    }
 }
 
 provider "aws" {
-  region  = "east-us-1"
+  region  = "us-east-1"
 }
 
 resource "aws_s3_bucket" "s3Bucket" {
